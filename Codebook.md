@@ -1,7 +1,6 @@
-## Code Book
+# Code Book
 
-Variables
-=========
+##Variables
 
 There are 68 variables are in the tidy data set. They are:
 
