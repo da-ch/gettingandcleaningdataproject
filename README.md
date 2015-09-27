@@ -14,14 +14,28 @@ Firstly, we add the activity codes and subject IDs as new columns to the trainin
 
 ######Step 2 - Extract only the measurements on the mean and standard deviation for each measurement
 
+Using a `grepl()` with a regular expression, we can select only variables containing 'mean()' or 'std()' in their names. These are the variables containing the means and standard deviations for each measurement.
+
 ######Step 3 - Use descriptive activity names to name the activities in the data set
+
+Please note that this step makes use of the `plyr` package so please ensure that package is installed. 
+
+The `join()` function is used to add the descriptive activity names to the data set which is then subsetted and the columns reordered to tidy it up, leaving only the descriptive activity names and not the activity codes.
 
 ######Step 4 - Appropriately label the data set with descriptive variable names
 
+A series of `gsub()` function calls is used to remove the illicit non-alphanumeric characters and then expand on the abbreviated parts of the variable names, to make them more descriptive.
+
 ######Step 5 - From the data set in step 4, create a second, independent tidy data set with the average of each variable for each activity and each subject
 
-The following code will read the tidyData.txt file back into R:
+Please note that this step makes use of the `reshape2` package so please ensure that package is installed. 
 
-```data <- read.table("./tidyData.txt", header = TRUE)
+First we `melt()` the data set, specifying 'Activity' and 'Subject' as the identifier variables. This gives a long, narrow data set consisting of a row for each value by Activity, Subject and variable.
 
-View(data)```
+We then use `dcast()`, specifying that we want to use the mean as the aggregation function, to get a data set consisting of 180 rows (one observation for each subject doing each activity) and 68 variables (the Activity and Subject identifier variables followed by the 66 features which had recorded a mean or standard deviation). The values are the means of the recorded observations for each of the features for each activity and subject. A codebook is included in this repository as separate file.
+
+The resultant tidy data set is then written out to a file, called 'tidyData.txt'. The following code will read the tidyData.txt file back into R:
+
+```data <- read.table("./tidyData.txt", header = TRUE)```
+
+```View(data)```
