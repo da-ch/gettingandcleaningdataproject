@@ -1,36 +1,27 @@
-# Code Book
+## Code Book
 
-Features 
-========
+Variables
+=========
 
-The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+There are 68 variables are in the tidy data set. They are:
+Subject - An identifier for the person who's activity was measured.
+Activity - The descriptive name of the measured activity.
+66 other variables which are the mean value per activity per subject of the estimated means and standard deviations of each of the signals below ("XYZ" is used to denote 3-axial signals in the X, Y and Z directions): 
 
-Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
-
-Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
-
-These signals were used to estimate variables of the feature vector for each pattern:  
-'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
-
-TimeBodyAcceleration-XYZ
-TimeGravityAcceleration-XYZ
-TimeBodyAccelerationJerk-XYZ
-TimeBodyGyro-XYZ
-TimeBodyGyroJerk-XYZ
-TimeBodyAccelerationMagnitude
-TimeGravityAccelerationMagnitude
-TimeBodyAccelerationJerkMagnitude
-TimeBodyGyroMagnitude
-TimeBodyGyroJerkMagnitude
-FrequencyBodyAcceleration-XYZ
-FrequencyBodyAccelerationJerk-XYZ
-FrequencyBodyGyro-XYZ
-FrequencyBodyAccelerationMagnitude
-FrequencyBodyAccelerationJerkMagnitude
-FrequencyBodyGyroMagnitude
-FrequencyBodyGyroJerkMagnitude
-
-The set of variables that were estimated from these signals are: 
-
-Mean value
-Standard deviation
+TimeBodyAccelerationXYZ - Time domain signal at constant rate of 50Hz; one variable for each of the X, Y and Z directions.
+TimeGravityAccelerationXYZ - Time domain signal at constant rate of 50Hz; one variable for each of the X, Y and Z directions.
+TimeBodyAccelerationJerkXYZ - Time domain signal at constant rate of 50Hz; one variable for each of the X, Y and Z directions.
+TimeBodyGyroXYZ - Time domain signal at constant rate of 50Hz; one variable for each of the X, Y and Z directions.
+TimeBodyGyroJerkXYZ - Time domain signal at constant rate of 50Hz; one variable for each of the X, Y and Z directions.
+TimeBodyAccelerationMagnitude - Time domain signal at constant rate of 50Hz; magnitutde calculated using the Euclidian norm.
+TimeGravityAccelerationMagnitude - Time domain signal at constant rate of 50Hz; magnitutde calculated using the Euclidian norm.
+TimeBodyAccelerationJerkMagnitude - Time domain signal at constant rate of 50Hz; magnitutde calculated using the Euclidian norm.
+TimeBodyGyroMagnitude - Time domain signal at constant rate of 50Hz; magnitutde calculated using the Euclidian norm.
+TimeBodyGyroJerkMagnitude - Time domain signal at constant rate of 50Hz; magnitutde calculated using the Euclidian norm.
+FrequencyBodyAccelerationXYZ - Frequency domain signal; one variable for each of the X, Y and Z directions.
+FrequencyBodyAccelerationJerkXYZ - Frequency domain signal; one variable for each of the X, Y and Z directions.
+FrequencyBodyGyroXYZ - Frequency domain signal; one variable for each of the X, Y and Z directions.
+FrequencyBodyAccelerationMagnitude - Frequency domain signal; magnitutde calculated using the Euclidian norm.
+FrequencyBodyAccelerationJerkMagnitude - Frequency domain signal; magnitutde calculated using the Euclidian norm.
+FrequencyBodyGyroMagnitude - Frequency domain signal; magnitutde calculated using the Euclidian norm.
+FrequencyBodyGyroJerkMagnitude - Frequency domain signal; magnitutde calculated using the Euclidian norm.
