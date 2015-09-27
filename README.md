@@ -39,6 +39,6 @@ We then use `dcast()`, specifying that we want to use the mean as the aggregatio
 The resultant tidy data set is then written out to a file, called 'tidyData.txt'. The following code will read the tidyData.txt file back into R:
 
 ```
-data <- read.table("./tidyData.txt", header = TRUE)
-View(data)
+tidyData <- read.table("./tidyData.txt", header = TRUE)
+View(tidyData)
 ```
