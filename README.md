@@ -1,4 +1,6 @@
-# Getting And Cleaning Data Course Project
+#README
+
+## Getting And Cleaning Data Course Project
 
 This file describes how the run_analysis.R script works, what decisions have been made and, where appropriate, why. I've listed this under headings of the steps
 
@@ -36,6 +38,7 @@ We then use `dcast()`, specifying that we want to use the mean as the aggregatio
 
 The resultant tidy data set is then written out to a file, called 'tidyData.txt'. The following code will read the tidyData.txt file back into R:
 
-```data <- read.table("./tidyData.txt", header = TRUE)```
-
-```View(data)```
+```
+data <- read.table("./tidyData.txt", header = TRUE)
+View(data)
+```
