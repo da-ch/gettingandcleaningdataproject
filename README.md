@@ -2,11 +2,11 @@
 
 ## Getting And Cleaning Data Course Project
 
-This file describes how the run_analysis.R script works, what decisions have been made and, where appropriate, why. I've listed this under headings of the steps
+This file describes how the run_analysis.R script works. I've listed this under headings named after the steps listed in the project specification, with the addition of a step 0 that I deemed to be a pre-requisite (although it could have been included in the first step).
 
 ######Step 0 - Read in the necessary files and set column names.
 
-Note that this is a pre-step to the project requirements; this is a necessary pre-requisite for the cleaning, sorting and analysis that follows. 
+Note that this is not one of the steps listed in the project requirements; this is a necessary pre-requisite for the cleaning, sorting and analysis that follows. 
 
 In order for the script to read in the files, the raw data files should be saved in the working directory, in their original structure inside the "UCI HAR Dataset" directory.
 
